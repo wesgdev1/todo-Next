@@ -65,17 +65,3 @@ export async function PUT(request: Request, { params }: Segments) {
     return NextResponse.json(error, { status: 400 });
   }
 }
-
-export async function DELETE(request: Request) {
-  try {
-    await prisma.todo.deleteMany({
-      where: {
-        completed: true,
-      },
-    });
-
-    return NextResponse.json("Todos deleted");
-  } catch (error) {
-    return NextResponse.json(error, { status: 400 });
-  }
-}
