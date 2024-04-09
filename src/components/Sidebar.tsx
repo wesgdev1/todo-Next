@@ -24,6 +24,12 @@ const menuItems = [
     title: "Server Actions",
     path: "/dashboard/server-todos",
   },
+
+  {
+    icon: <IoListOutline />,
+    title: "Cookies",
+    path: "/dashboard/cookies",
+  },
 ];
 
 export const Sidebar = () => {
