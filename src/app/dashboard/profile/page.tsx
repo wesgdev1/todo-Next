@@ -8,9 +8,13 @@ export default function ProfilePage() {
     <div>
       <h1>Hello Page</h1>
       <hr />
-      <div>
+      <div className="flex flex-col">
         <h2>Profile</h2>
-        <pre>{JSON.stringify(session, null, 2)}</pre>
+        <span>{session?.user?.name ?? "no-name"}</span>
+        <span>{session?.user?.email ?? "no-name"}</span>
+        <span>{session?.user?.image ?? "no-name"}</span>
+        <span>{session?.user?.id ?? "no-name"}</span>
+        <span>{session?.user?.roles?.join(",") ?? ["no-name"]}</span>
       </div>
     </div>
   );

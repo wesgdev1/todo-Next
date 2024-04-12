@@ -32,7 +32,9 @@ export const LogoutButton = () => {
   return (
     <button
       onClick={() => {
-        signOut();
+        signOut({
+          callbackUrl: "/",
+        });
       }}
       className="px-4 py-3 flex items-center space-x-4 rounded-md text-gray-600 group"
     >
