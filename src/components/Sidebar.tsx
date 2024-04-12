@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { CiLogout } from "react-icons/ci";
+
 import { SidebarItem } from ".";
 import {
   IoCalendarOutline,
@@ -8,7 +8,7 @@ import {
   IoListOutline,
 } from "react-icons/io5";
 import { auth } from "@/auth";
-import { redirect } from "next/navigation";
+
 import { LogoutButton } from "./LogoutButton";
 
 const menuItems = [

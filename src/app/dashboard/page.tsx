@@ -11,14 +11,17 @@ export default async function DashboardPage() {
   }
 
   return (
-    <div className="grid gap-6 grid-cols-1 sm:grid-cols-2">
+    <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 h-screen ">
       {/* TODO: src/components <WidgetItem /> */}
-      <WidgetItem title={`Usuario conectado:${session?.user?.name} `}>
-        <div className="flex flex-col">
-          <span>{session.user?.name}</span>
-          <span>{session.user?.email}</span>
+      <WidgetItem title={`Usuario conectado: ${session?.user?.name} `}>
+        <div className="flex flex-col text-center">Informacion de sesion</div>
+        <div>
+          <div className="flex flex-col text-center">
+            <h1>Nombre: {session?.user?.name}</h1>
+            <h1>Email: {session?.user?.email}</h1>
+            <h1>Roles: {session?.user?.roles}</h1>
+          </div>
         </div>
-        <div>{<pre>{JSON.stringify(session, null, 2)}</pre>}</div>
       </WidgetItem>
       {/* <WidgetItem />
       <WidgetItem />
